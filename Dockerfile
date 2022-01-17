@@ -9,7 +9,7 @@ WORKDIR /root
 RUN wget -q --progress=bar:force:noscroll --show-progress https://download2.interactivebrokers.com/installers/ibgateway/latest-standalone/ibgateway-latest-standalone-linux-x64.sh -O install-ibgateway.sh
 RUN chmod a+x install-ibgateway.sh
 
-RUN wget -q --progress=bar:force:noscroll --show-progress https://github.com/IbcAlpha/IBC/releases/download/3.12.0/IBCLinux-3.12.0.zip
+RUN wget -q --progress=bar:force:noscroll --show-progress https://github.com/IbcAlpha/IBC/releases/download/3.12.0/IBCLinux-3.12.0.zip -O ibc.zip
 RUN unzip ibc.zip -d /opt/ibc
 RUN chmod a+x /opt/ibc/*.sh /opt/ibc/*/*.sh
 
