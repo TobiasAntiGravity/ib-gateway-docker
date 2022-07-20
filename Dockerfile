@@ -34,6 +34,7 @@ COPY --from=builder /opt/ibc /opt/ibc
 COPY --from=builder /root/run.sh run.sh
 
 COPY ibc_config.ini ibc/config.ini
+COPY jts.ini /root/Jts/jts.ini
 
 ENV DISPLAY :0
 ENV TRADING_MODE paper
