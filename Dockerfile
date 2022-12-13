@@ -26,6 +26,7 @@ WORKDIR /root
 
 COPY --from=builder /root/install-ibgateway.sh install-ibgateway.sh
 RUN yes "" | ./install-ibgateway.sh
+RUN yes | apt-get install vim
 
 RUN mkdir .vnc
 RUN x11vnc -storepasswd 1358 .vnc/passwd
