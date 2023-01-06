@@ -37,6 +37,8 @@ COPY --from=builder /root/run.sh run.sh
 COPY ibc_config.ini ibc/config.ini
 COPY jts.ini /root/Jts/jts.ini
 
+RUN mkdir /root/Jts/mpmblnljkhgpoojcjoghihminncblhllbpjnpbed
+
 ENV DISPLAY :0
 ENV TRADING_MODE paper
 ENV TWS_PORT 4002
